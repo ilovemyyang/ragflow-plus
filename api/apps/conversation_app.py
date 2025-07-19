@@ -174,6 +174,13 @@ def list_convsersation():
 @validate_request("conversation_id", "messages")
 def completion():
     req = request.json
+    # # zhy test
+    # req['employee_info'] = f'''
+    # 工龄：10年;
+    # 部门：研发部;
+    # 职务级别:高级;
+    # 年假剩余：15天
+    # '''
     msg = []
     for m in req["messages"]:
         if m["role"] == "system":
